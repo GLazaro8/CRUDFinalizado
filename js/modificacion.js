@@ -11,25 +11,25 @@ function validation() {
 
     if (nombre.value === "") {
         document.getElementById('nombreHelp').style.display = "block";
-        nombre.style.borderColor = "red";
+        nombre.style.borderColor = "yellow";
         correcto = false ;
     }
 
     if (apellidos.value === "" ) {
         document.getElementById('apellidosHelp').style.display = "block";
-        document.getElementById('apellidos').style.borderColor = "red";
+        document.getElementById('apellidos').style.borderColor = "yellow";
         correcto = false ;
     }
 
     if (fecha.value === "") {
         document.getElementById('fechaHelp').style.display = "block";
-        document.getElementById('fecha').style.borderColor = "red";
+        document.getElementById('fecha').style.borderColor = "yellow";
         correcto = false ;
     }
 
     if (email.value == "" || !( /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/.test(email.value))) {
         document.getElementById('emailHelp').style.display="block" ;
-        document.getElementById('email').style.borderColor="red" ;
+        document.getElementById('email').style.borderColor="yellow" ;
         correcto = false ;
     }
 
