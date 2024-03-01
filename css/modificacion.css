@@ -1,10 +1,13 @@
 /***********************************************************************************************/
-/*                                  ESTILO modicicacion HTML                                      */
+/*                               ESTILO MODIFICACION HTML                                      */
 /*                                                                                             */
 /***********************************************************************************************/
 
+label span{color: yellow;}
 
-label span{color: red;}
+body{
+    overflow-x: hidden;
+}
 
 form {
     width: 60%;
@@ -152,4 +155,14 @@ form #insertar {
     50%,100% {
         bottom: 100%;
     }
+}
+
+.botones button {
+    background-color: transparent;
+}
+
+.text-hidden{
+    display: none;
+    color: yellow;
+    padding-bottom: 1rem;
 }
