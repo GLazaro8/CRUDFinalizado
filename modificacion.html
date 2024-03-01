@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/insercion.css">
+    <link rel="icon" type="image/x-icon" href="./img/sunset-icon-6818308_960_720-removebg-preview.png">
+</head>
+<body>
+
+    <form action="" method="" onsubmit="return validation(event)"> 
+                                
+        <h2>Modificación de datos</h2>
+        <!-- Introducción de nombre -->
+        <label for="nombre">Nombre: <span>*</span></label>
+        <input onchange="resetear('nombre')" type="text" id="nombre" name="nombre" placeholder="escribe tu nombre" value="Gonzalo">
+        <div id="nombreHelp" class="text-hidden">Nombre incorrecto</div>
+        <!-- Introducción de apellido -->
+        <label for="apellidos">Apellidos: <span>*</span></label>
+        <input onchange="resetear('apellidos')" type="text" id="apellidos" name="apellidos" placeholder="escribe tus apellidos" value="Lázaro Zambrano">
+        <div id="apellidosHelp" class="text-hidden">Apellidos incorrectos</div>
+        <!-- Introducción de fecha -->
+        <label for="fecha">Fecha ingreso: <span>*</span></label>
+        <input onchange="resetear('fecha')" type="date" id="fecha" name="fecha" placeholder="escribe la fecha de ingreso" value="2022-11-03">
+        <div id="fechaHelp" class="text-hidden">Fecha incorrecta</div>
+        <!-- Introducción de correo -->
+        <label for="email">Correo Electrónico: <span>*</span></label>
+        <input onchange="resetear('email')" type="email" id="email" name="email" placeholder="escribe tu email" value="gonzalo@email.com">
+        <div id="emailHelp" class="text-hidden">Email incorrecto</div>
+        <!-- radio button se usa para elegir una entre varias alternativas -->
+        <label>Sexo: <span>*</span></label>
+        <input onchange="resetearSexo('sexo')" type="radio" name="sexo" id="Hombre" value="Hombre" checked><label for="Hombre">Hombre</label>
+        <input onchange="resetearSexo('sexo')" type="radio" name="sexo" id="Mujer" value="Mujer"><label for="Mujer">Mujer</label>
+        <input onchange="resetearSexo('sexo')" type="radio" name="sexo" id="Otra-cosa" value="Otra-cosa"><label for="Otra-cosa">Otra cosa</label>
+        <div id="sexoHelp" class="text-hidden">No has seleccionado ninguna opción</div>
+        <!-- select -->
+        <div>
+        <label for="provincia">Elija provincia: <span>*</span></label>
+        <select onchange="resetear('provincia')" name="provincia" id="provincia">
+            <option value="">-- elige opcion </option>
+            <option value="29" selected>Málaga</option>
+            <option value="13">Granada</option>
+            <option value="4">Almeria</option>
+            <option value="5">Cádiz</option>
+            <option value="6">Córdoba</option>
+            <option value="7">Jaen</option>
+            <option value="8">Huelva</option>
+            <option value="9">Sevilla</option>
+        </select>
+        </div>
+        <div id="provinciaHelp" class="text-hidden">No has seleccionado ninguna provincia</div>
+        <!-- textarea -->
+        <div>
+            <div>
+            <label for="coment">Comentarios: </label>
+            </div>
+            <textarea name="coment" id="coment" cols="30" rows="4"></textarea>
+        </div>
+        <!-- Casilla de verificación -->
+        <div>
+            <input onchange="resetear('terminos')" type="checkbox" name="terminos" id="terminos" checked>
+            <label for="terminos">Acepto los <a href="">términos y condiciones de privacidad </a><span>*</span></label>
+        </div>
+        <div id="terminosHelp" class="text-hidden">No has aceptado los términos y condiciones</div>
+
+        <!-- botón enviar, obligatorio -->
+        <div class="botones">
+            <button id="insertar" type="submit">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Insertar
+            </button>
+        </div>
+    </form>
+
+    <script src="/js/modificacion.js"></script>
+    
+</body>
+</html>
