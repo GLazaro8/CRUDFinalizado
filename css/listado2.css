@@ -76,7 +76,7 @@ table tr:nth-child(2n+1) {
   td:first-child {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-100%);
     width: 100px;
   }
   td:not(:first-child) {
@@ -103,7 +103,11 @@ table tr:nth-child(2n+1) {
     content: "Fecha Ing.:";
   }
   td:nth-child(5):before {
-    content: "Comentarios:";
+    content: "Coment.:";
+  }
+  td:nth-child(6):before {
+    content: "Acciones:";
+    display: inline-block;
   }
 
   tr {
@@ -171,5 +175,30 @@ table tr:nth-child(2n+1) {
     overflow: visible;
   }
 }
+
+.btnEditar {
+  border: 1px bold;
+  color: black;
+  font-weight: bold;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: aqua;
+  border-color: black;
+}
+
+.btnBorrar {
+  border: 1px bold;
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin: 3px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(239, 0, 119);
+  border-color: black;
+}
+
 
 
